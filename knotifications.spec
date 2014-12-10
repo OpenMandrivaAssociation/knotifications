@@ -13,6 +13,7 @@ URL: http://kde.org/
 License: GPL
 Group: System/Libraries
 BuildRequires: cmake
+BuildRequires: ninja
 BuildRequires: cmake(KF5Service)
 BuildRequires: cmake(KF5Config)
 BuildRequires: cmake(KF5WindowSystem)
@@ -44,15 +45,14 @@ KNotifications is an abstraction to system notifications.
 
 %prep
 %setup -q
-%cmake
+%cmake -G Ninja \
+	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
 
 %build
-%make -C build
+ninja -C build
 
 %install
-%makeinstall_std -C build
-mkdir -p %{buildroot}%{_libdir}/qt5
-mv %{buildroot}%{_prefix}/mkspecs %{buildroot}%{_libdir}/qt5
+DESTDIR="%{buildroot}" ninja install -C build
 
 L="`pwd`/%{name}.lang"
 cd %{buildroot}
