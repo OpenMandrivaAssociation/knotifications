@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   knotifications-5.13.0.tar.xz: 0d0f414546be09e352d627abfb7edb6ab44bd310
+sources:
+  knotifications-5.14.0.tar.xz: ce8def2e20747381a820ea7ce7ea50c7e2390efa
