@@ -6,7 +6,7 @@
 
 Name: knotifications
 Version:	5.23.0
-Release:	1
+Release:	2
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
 Summary: The KDE Frameworks 5 system notifications library
 URL: http://kde.org/
@@ -20,6 +20,7 @@ BuildRequires: cmake(KF5IconThemes)
 BuildRequires: cmake(Phonon4Qt5)
 BuildRequires: pkgconfig(Qt5Core)
 BuildRequires: pkgconfig(Qt5Test)
+BuildRequires: pkgconfig(dbusmenu-qt5)
 Requires: %{libname} = %{EVRD}
 
 %description
