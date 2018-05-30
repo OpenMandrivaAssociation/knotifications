@@ -14,6 +14,7 @@ License: GPL
 Group: System/Libraries
 BuildRequires: cmake(ECM)
 BuildRequires: cmake(KF5Service)
+BuildRequires: cmake(KF5Codecs)
 BuildRequires: cmake(KF5Config)
 BuildRequires: cmake(KF5WindowSystem)
 BuildRequires: cmake(KF5IconThemes)
