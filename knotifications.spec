@@ -19,6 +19,7 @@ BuildRequires: cmake(KF5WindowSystem)
 BuildRequires: cmake(KF5IconThemes)
 BuildRequires: cmake(Phonon4Qt5)
 BuildRequires: pkgconfig(Qt5Core)
+BuildRequires: pkgconfig(Qt5Widgets)
 BuildRequires: pkgconfig(Qt5Test)
 BuildRequires: pkgconfig(dbusmenu-qt5)
 Requires: %{libname} = %{EVRD}
