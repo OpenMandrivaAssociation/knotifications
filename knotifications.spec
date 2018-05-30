@@ -21,6 +21,7 @@ BuildRequires: cmake(Phonon4Qt5)
 BuildRequires: pkgconfig(Qt5Core)
 BuildRequires: pkgconfig(Qt5Widgets)
 BuildRequires: pkgconfig(Qt5Test)
+BuildRequires: pkgconfig(Qt5X11Extras)
 BuildRequires: pkgconfig(dbusmenu-qt5)
 Requires: %{libname} = %{EVRD}
 
