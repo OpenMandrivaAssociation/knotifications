@@ -27,6 +27,7 @@ BuildRequires: pkgconfig(Qt5X11Extras)
 BuildRequires: pkgconfig(Qt5Xml)
 BuildRequires: pkgconfig(dbusmenu-qt5)
 # For QCH format docs
+BuildRequires: doxygen
 BuildRequires: qt5-assistant
 Requires: %{libname} = %{EVRD}
 
