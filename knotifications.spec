@@ -6,7 +6,7 @@
 
 Name: knotifications
 Version:	5.70.0
-Release:	1
+Release:	2
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
 Summary: The KDE Frameworks 5 system notifications library
 URL: http://kde.org/
@@ -23,10 +23,12 @@ BuildRequires: cmake(Phonon4Qt5)
 BuildRequires: pkgconfig(Qt5Core)
 BuildRequires: pkgconfig(Qt5DBus)
 BuildRequires: pkgconfig(Qt5Widgets)
+BuildRequires: cmake(Qt5TextToSpeech)
 BuildRequires: pkgconfig(Qt5Test)
 BuildRequires: pkgconfig(Qt5X11Extras)
 BuildRequires: pkgconfig(Qt5Xml)
 BuildRequires: pkgconfig(dbusmenu-qt5)
+BuildRequires: pkgconfig(libcanberra)
 # For QCH format docs
 BuildRequires: doxygen
 BuildRequires: qt5-assistant
@@ -60,7 +62,7 @@ Suggests: %{devname} = %{EVRD}
 Developer documentation for %{name} for use with Qt Assistant
 
 %prep
-%setup -q
+%autosetup -p1
 %cmake_kde5
 
 %build
