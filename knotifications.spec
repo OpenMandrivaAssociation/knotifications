@@ -5,7 +5,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: knotifications
-Version:	5.72.0
+Version:	5.73.0
 Release:	1
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
 Summary: The KDE Frameworks 5 system notifications library
@@ -80,7 +80,7 @@ for i in .%{_datadir}/locale/*/LC_MESSAGES/*.qm; do
 done
 
 %files -f %{name}.lang
-%{_datadir}/qlogging-categories5/*.categories
+%{_datadir}/qlogging-categories5/*.*categories
 %{_datadir}/dbus-1/interfaces/*
 %{_datadir}/kservicetypes5/knotificationplugin.desktop
 
