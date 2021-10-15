@@ -7,6 +7,7 @@ Name: knotifications
 Version:	5.87.0
 Release:	1
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
+Patch0: knotifications-5.87.0-no-nonlinux-deps.patch
 Summary: The KDE Frameworks 5 system notifications library
 URL: http://kde.org/
 License: GPL
