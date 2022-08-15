@@ -4,7 +4,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: knotifications
-Version:	5.96.0
+Version:	5.97.0
 Release:	1
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
 Patch0: knotifications-5.87.0-no-nonlinux-deps.patch
@@ -82,7 +82,6 @@ done
 %files -f %{name}.lang
 %{_datadir}/qlogging-categories5/*.*categories
 %{_datadir}/dbus-1/interfaces/*
-%{_datadir}/kservicetypes5/knotificationplugin.desktop
 
 %files -n %{libname}
 %{_libdir}/*.so.%{major}
